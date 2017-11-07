@@ -1,0 +1,44 @@
+<div class="capitais">
+        
+    <h1 class="capitais__title">Capitais</h1>
+    
+    <div class="col-6">
+        <table class="capitais__table">
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <td></td>
+            </tr>
+            <tr *ngFor="let capital of forecast | slice:0:5">
+                <td>{{capital.forecast.low | fahrenheittocelsius}}</td>
+                <td>{{capital.forecast.high | fahrenheittocelsius}}</td>
+                <td>{{capital.city}}</td>
+            </tr>
+        </table>    
+    </div>
+
+    <div class="col-6">
+        <table class="capitais__table">
+            <tr>
+                <th>Min</th>
+                <th>Max</th>
+                <td></td>
+            </tr>
+            <tr *ngFor="let capital of forecast | slice:5:10">
+                <td>{{capital.forecast.low | fahrenheittocelsius}}</td>
+                <td>{{capital.forecast.high | fahrenheittocelsius}}</td>
+                <td>{{capital.city}}</td>
+            </tr>
+        </table> 
+    </div>
+            
+            
+              
+</div>
+    
+    
+    
+
+
+
+

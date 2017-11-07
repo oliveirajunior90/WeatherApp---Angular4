@@ -1,0 +1,22 @@
+
+
+.weather {
+    
+    max-width:400px;
+    margin:auto;
+
+    &__title {
+        font-size: 2.5rem;
+        text-align: center;
+        color:white;
+    }
+
+    hr {
+        border-top: 2px solid #ffc161;
+        border-bottom: 0;
+        margin-top: 42px;
+        margin-bottom: 10px;
+    }
+
+}
+

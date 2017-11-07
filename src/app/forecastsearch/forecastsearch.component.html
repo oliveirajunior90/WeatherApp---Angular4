@@ -1,0 +1,27 @@
+<div class="search-result" *ngIf="show == 1">
+    <p class="search-result__location">{{city.location.city}}, {{city.location.region}} - {{city.location.country}} </p>
+    <h1 class="search-result__condition">{{city.item.condition.temp | fahrenheittocelsius }}°C {{city.item.condition.text}}</h1>
+
+    <div class="search-result__atributes atribute--low-max"><i class="fa fa-long-arrow-down" aria-hidden="true"></i> {{ city.item.forecast[0].low | fahrenheittocelsius}}°C 
+        <i class="fa fa-long-arrow-up" aria-hidden="true"></i> {{ city.item.forecast[0].high | fahrenheittocelsius}}°C</div>
+    <div class="search-result__atributes atribute--wind">Vento <strong>{{city.wind.speed}}Km/h</strong></div>
+    <div class="search-result__atributes atribute--humity">Humidade <strong>{{city.atmosphere.humidity}}%</strong> </div>
+
+    <hr>
+
+    <div class="search-result__forecast" *ngFor="let forecast of city.item.forecast | slice:1:6">
+        <div class="search-result__forecast-item">
+            <div class="day">{{forecast.day}}</div>
+            <div class="low-high">{{forecast.low | fahrenheittocelsius}}° {{forecast.high | fahrenheittocelsius}}°</div>
+        </div>
+    </div>
+
+</div>
+
+<div class="search-box">
+    <form [formGroup]='formulario' (ngSubmit)="searchForecast(f)">
+        <input class="search-box__text" type="text" placeholder="Insira aqui o nome da cidade" formControlName="city">
+        <input class="search-box__btn" type="submit">
+    </form>
+</div>
+

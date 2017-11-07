@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    background: rgba(255,132,0,1);
+    background: -moz-linear-gradient(top, rgba(255,132,0,1) 0%, rgba(255,174,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,132,0,1)), color-stop(100%, rgba(255,174,0,1))); 
+    font-family: Geneva, Tahoma, sans-serif;
+}
+
+.col-6 {
+    float:left;
+    width: 50%;
+}
